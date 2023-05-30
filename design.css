@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;900&family=Sigmar&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color: #737373;
+    --heading-color: #2E2E2E;
+    --white-color: #fff;
+    --primary-color: #09A9C8;
+    --backgroud-color: #D4F1F4;
+}
+
+.hero-section{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--backgroud-color);
+    position: relative;
+}
+
+/* navbar */
+.navbar{
+    width: 100%;
+    height: 3.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4.8rem;
+}
+
+/* navbar:- a: anchor tag */
+.nav-logo{
+    color: var(--heading-color);
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8rem;
+}
+
+/* navbar:- img: logo */
+.logo{
+    height: 2.8rem;
+}
+
+/* navbar:- ul */
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 3.2rem;
+    list-style: none;
+}
+
+/* navbar:- ul: li */
+.nav-list .nav-link{
+    color: var(--heading-color);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;   
+}
+
+/* navbar :- a : btn */
+.nav-btn{
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 0.8rem 2.2rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+/* hero-section */
+
+.container{
+    width: 90%;
+    height: 80vh;
+    position: absolute;
+    top: 6rem;
+    left: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.headings{
+    margin-top: 10%;
+}
+
+.headings h1{
+    color: var(--heading-color);
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.headings p{
+    color: var(--text-color);
+    font-size: 1.10rem;
+    line-height: 2rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 2.4rem 0;
+}
+
+.headings .container-btn{
+    text-decoration: none;
+    color: var(--heading-color);
+    background-color: transparent;
+    padding: 0.8rem 2.2rem;
+    border: 2px solid var(--primary-color);
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: all 0.6s ease-in-out;
+}
+
+.headings .container-btn:hover{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+
+}
+
+.container-img img{
+    width: 40rem;
+}
+
+
+/* smaller screen */
+/* 993 to 1200 */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+
+    .container img{
+        width: 28rem;
+        height: 25rem;
+        margin-top: 2rem;
+        margin-left: 15rem;
+    }
+  }
+
+
+  /* 769 to 992 */
+  @media (min-width: 769px) and (max-width: 992px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+
+    .container img{
+        width: 25rem;
+        height: 20rem;
+        margin-top: 2rem;
+        margin-left: 15rem;
+    }
+  }
+
+  /* 577 to 768 */
+  @media (min-width: 577px) and (max-width: 768px) {
+
+        .hero-section{
+            width: 100%;
+            max-width: 100%;
+            height: 100vh;
+        }
+
+        .container{
+            grid-template-columns: 1fr;
+        }
+
+        .container h1{
+            font-size: 3rem;
+        }
+
+        .container img{
+            width: 22rem;
+            height: 18rem;
+            margin-top: 2rem;
+            margin-left: 15rem;
+        }  
+    }
+
+    /* to 576 */
+    @media (max-width: 576px) {
+        .hero-section{
+            width: 100%;
+            max-width: 100%;
+            height: 100vh;
+        }
+
+        .container{
+            grid-template-columns: 1fr;
+        }
+
+        .container h1{
+            font-size: 2.2rem;
+        }
+
+        .container img{
+            width: 20rem;
+            height: 12rem;
+            margin-top: 2rem;
+            margin-left: 15rem;
+        }  
+
+    }
